@@ -4,6 +4,8 @@ Rules for coding agents working in repositories created from this template.
 
 ## Standard scripts
 
+Use Node 24 (see .nvmrc). Run npm ci first in a fresh checkout.
+
 - `npm run typecheck`: `tsc --noEmit`. Run after every code change and
   before committing.
 - `npm run lint`: `eslint .`. Run after every code change and before
@@ -13,7 +15,7 @@ Rules for coding agents working in repositories created from this template.
 - `npm run build`: `tsc -p tsconfig.build.json`, emits to `dist/`. Run before
   handing off or opening a PR.
 
-Run `npm ci` first in a fresh checkout. CI runs all four scripts on every pull
+CI runs all four scripts on every pull
 request; a PR is not ready until they all pass.
 
 ## Bounded output
